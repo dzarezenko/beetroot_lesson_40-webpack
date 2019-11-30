@@ -1,4 +1,5 @@
 import _ from 'lodash';
+import $ from 'jquery';
 
 function component() {
   const element = document.createElement('div');
@@ -10,3 +11,18 @@ function component() {
 }
 
 document.body.appendChild(component());
+
+$(() => {
+
+  let a = $(`<a>`);
+  console.log(a);
+  a.text("Some jQuery Link");
+  a.attr('href', "www.google.com");
+  a.css({
+    fontStyle: "italic",
+    fontWeight: "bold",
+  });
+
+  $("body").append(a);
+
+});
